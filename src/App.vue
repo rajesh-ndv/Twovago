@@ -8,10 +8,13 @@
         </a>
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item">
-            <router-link class="nav-link pr-3" to="/login">Sign in</router-link>
+            <router-link class="nav-link pr-3" to="/login" v-if="user == null" >Sign In</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="btn btn-outline-primary" to="/">Sign up</router-link>
+          <li class="nav-item" >
+            <router-link class="btn btn-outline-primary" to="/" v-if="user == null" >Sign up</router-link>
+          </li>
+          <li class="nav-item" >
+            <router-link class="btn btn-outline-primary" to="/login" v-if="user != null"><span @click="removeUser">Logout</span></router-link>
           </li>
         </ul>
       </div>
@@ -27,3 +30,18 @@
     </div>
   </div>
 </template>
+
+<script>
+  
+    export default {
+        methods: {
+          removeUser: function(){
+            localStorage.removeItem("user");
+            this.$router.go();	
+          }
+        },
+        data() {
+            return {user : localStorage.getItem('user')}
+        }
+    }
+</script>

@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueSwal from 'vue-swal'
+
+Vue.use(VueSwal)
 
 Vue.use(VueRouter)
 
@@ -18,6 +21,11 @@ Vue.use(VueRouter)
     path: '/forgot-password',
     name: 'forgot-password',
     component: () => import('../components/ForgotPassword.vue')
+  },
+  {
+    path: '/payment-details',
+    name: 'payment-details',
+    component: () => import('../components/Payment.vue')
   }
 ]
 
