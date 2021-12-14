@@ -8,8 +8,8 @@
                 <input type="text" class="form-control form-control-lg" />
             </div>
             <div class="form-group">
-                <label>Name on the Card</label>
-                <input type="text" placeholder="1234 5678 345678" class="form-control form-control-lg" />
+                <label>Card Number</label>
+                <input type="number" placeholder="1234 5678 345678" class="form-control form-control-lg" />
             </div>
 
             <div class="form-row form-group">
@@ -26,10 +26,6 @@
 
             <button @click="alert" type="button" class="btn btn-primary gradient-custom-2 btn-lg btn-block">Pay</button>
 
-            <p class="forgot-password text-right mt-2 mb-4">
-                <router-link to="/forgot-password">Forgot password ?</router-link>
-            </p>
-
         </form>
     </div>
 </template>
@@ -39,10 +35,10 @@
         methods: {
             alert: function() {
                 this.$swal({
-                        title: "Payment Sucessful",
-                        text: "Thank you for your booking",
-                        icon: "success",
-                        });
+                    title: "Payment Sucessful",
+                    text: "Thank you for your booking",
+                    icon: "success",
+                });
             }
         },
         data() {
