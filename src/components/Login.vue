@@ -15,9 +15,9 @@
 
             <button type="submit" class="btn btn-primary gradient-custom-2 btn-lg btn-block">Sign In</button>
 
-            <p class="forgot-password text-right mt-2 mb-4">
+            <!-- <p class="forgot-password text-right mt-2 mb-4">
                 <router-link to="/forgot-password">Forgot password ?</router-link>
-            </p>
+            </p> -->
 
             <!-- <div class="social-icons">
                 <ul>
@@ -58,6 +58,12 @@ import axios from 'axios';
                              }
                              localStorage.setItem("user",res.data);
                              this.$router.push("/home")	
+                         }else{
+                            this.$swal({
+                                title: "Wrong Credentials",
+                                text: "Please check the Username and Password",
+                                icon: "error",
+                            });
                          }
                      })
                      .catch((error) => {

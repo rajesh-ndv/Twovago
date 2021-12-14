@@ -6,6 +6,7 @@
             <div class="form-group">
                 <label>Source</label>
                 <select class="form-control form-control-lg" v-model="form.source">
+                    <!-- <option :value="null" disabled hidden>Select Age</option> -->
                     <option>BNC</option>
                 </select>
             </div>
@@ -52,6 +53,7 @@ import axios from 'axios';
     export default {
         data() {
             return {
+                // source: null,
                 dates: date.date,
                 form: {
                     source: " ",

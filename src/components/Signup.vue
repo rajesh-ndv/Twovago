@@ -48,6 +48,12 @@ import axios from 'axios';
                          console.log(res.data);
                          if(res && res.data && res.data.message==="User Registration Succesful"){
                             this.$router.push("/login")
+                         }else{
+                            this.$swal({
+                                title: "Wrong Credentials",
+                                text: "Please check the Username and Password",
+                                icon: "error",
+                            });
                          }
                      })
                      .catch((error) => {
