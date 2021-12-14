@@ -13,26 +13,33 @@
                 <input type="password" class="form-control form-control-lg" />
             </div>
 
-            <button type="submit" class="btn btn-primary gradient-custom-2 btn-lg btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary gradient-custom-2 btn-lg btn-block" @click="addUser">Sign In</button>
 
             <p class="forgot-password text-right mt-2 mb-4">
                 <router-link to="/forgot-password">Forgot password ?</router-link>
             </p>
 
-            <div class="social-icons">
+            <!-- <div class="social-icons">
                 <ul>
                     <li><a href="#"><i class="fa fa-google"></i></a></li>
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 </ul>
-            </div>
+            </div> -->
 
         </form>
     </div>
 </template>
 
 <script>
+    
     export default {
+        methods: {
+            addUser: function(){
+                localStorage.setItem("user",20);
+                this.$router.go()	
+            }
+        },
         data() {
             return {}
         }

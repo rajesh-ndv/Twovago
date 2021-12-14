@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueSwal from 'vue-swal'
+
+Vue.use(VueSwal)
 
 Vue.use(VueRouter)
 
@@ -20,6 +23,7 @@ Vue.use(VueRouter)
     component: () => import('../components/ForgotPassword.vue')
   },
   {
+
     path: '/home',
     name: 'home',
     component: () => import('../components/Booking.vue')
@@ -28,6 +32,11 @@ Vue.use(VueRouter)
     path: '/train_list',
     name: 'train_list',
     component: () => import('../components/TrainList.vue')
+  },
+  {
+    path: '/payment-details',
+    name: 'payment-details',
+    component: () => import('../components/Payment.vue')
   }
 ]
 
