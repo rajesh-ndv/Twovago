@@ -1,7 +1,7 @@
 <template>
     <div class="vue-temp">
-        <table>
-            <thead>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
                 <tr>
                     <th>Train Name</th>
                     <th>Train Number</th>
@@ -16,7 +16,7 @@
                     <td>B</td>
                     <td>C</td>
                     <td>D</td>
-                    <td><button>E</button></td>
+                    <td><button class="btn btn-outline-primary" to="\">E</button></td>
                 </tr>
             </tbody>
         </table>

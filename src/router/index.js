@@ -25,8 +25,8 @@ Vue.use(VueRouter)
     component: () => import('../components/Booking.vue')
   },
   {
-    path: '/list',
-    name: 'list',
+    path: '/train_list',
+    name: 'train_list',
     component: () => import('../components/TrainList.vue')
   }
 ]
