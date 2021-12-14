@@ -17,17 +17,25 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <div>
+            <div class="form-row form-group">
+                <div class="col">
                     <label>Date</label>
                     <select class="form-control form-control-lg">
-                        <option v-for="date in dates.dates" :key="date.dates">{{date}}</option>
+                        <option v-for="date in dates.dates" :key="date">{{date}}</option>
                     </select>
+                </div>
+
+                <div class="col">
+                    <label>Month</label>
                     <select class="form-control form-control-lg">
-                        <option v-for="date in dates.months" :key="date.months">{{date.months}}</option>
+                        <option v-for="date in dates.months" :key="date">{{date}}</option>
                     </select>
+                </div>
+
+                <div class="col">
+                    <label>Year</label>
                     <select class="form-control form-control-lg">
-                        <option v-for="date in dates.years" :key="date.years">{{date.years}}</option>
+                        <option v-for="date in dates.years" :key="date">{{date}}</option>
                     </select>
                 </div>
             </div>
@@ -43,7 +51,7 @@
     export default {
         data() {
             return {
-                dates: date
+                dates: date.date
             }
         }
     }
